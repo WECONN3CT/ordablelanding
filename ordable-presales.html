@@ -1,0 +1,2361 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 ORDABLE PRESALES | Sichere dir 50% Rabatt + Frühbucher-Preis!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-yellow: #FDB913;
+            --dark-yellow: #F5A623;
+            --light-yellow: #FFF4D6;
+            --dark-bg: #1a1a1a;
+            --text-dark: #2d2d2d;
+            --text-light: #666;
+            --white: #ffffff;
+            --success-green: #10B981;
+            --urgent-red: #EF4444;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            background: #fafafa;
+        }
+
+        /* Floating Background Elements */
+        .bg-decoration {
+            position: fixed;
+            border-radius: 50%;
+            opacity: 0.1;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .bg-circle-1 {
+            width: 600px;
+            height: 600px;
+            background: var(--primary-yellow);
+            top: -200px;
+            right: -200px;
+            animation: float1 25s ease-in-out infinite;
+        }
+
+        .bg-circle-2 {
+            width: 400px;
+            height: 400px;
+            background: var(--dark-yellow);
+            bottom: -100px;
+            left: -100px;
+            animation: float2 20s ease-in-out infinite;
+        }
+
+        .bg-circle-3 {
+            width: 300px;
+            height: 300px;
+            background: var(--primary-yellow);
+            top: 50%;
+            left: 50%;
+            animation: float3 30s ease-in-out infinite;
+        }
+
+        @keyframes float1 {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-50px, 50px) rotate(180deg); }
+        }
+
+        @keyframes float2 {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(50px, -50px) rotate(-180deg); }
+        }
+
+        @keyframes float3 {
+            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+            50% { transform: translate(calc(-50% + 30px), calc(-50% + 30px)) rotate(360deg); }
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            padding: 1rem 0;
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 84px;
+            width: auto;
+            display: block;
+            transform: scale(1.5);
+            transform-origin: left center;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-yellow);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            transform: rotate(-10deg);
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover .logo-icon {
+            transform: rotate(0deg) scale(1.1);
+        }
+
+        .cta-header {
+            background: var(--urgent-red);
+            color: white;
+            padding: 0.7rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(239, 68, 68, 0.4);
+        }
+
+        .cta-header:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(239, 68, 68, 0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, #FDB913 0%, #F5A623 100%);
+            padding: 200px 3rem 120px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(255,255,255,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.15) 0%, transparent 50%);
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .urgent-badge {
+            display: inline-block;
+            background: var(--urgent-red);
+            color: white;
+            padding: 0.6rem 1.8rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(239, 68, 68, 0.4);
+            animation: shake 3s ease-in-out infinite;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: rotate(0deg); }
+            10%, 30%, 50%, 70%, 90% { transform: rotate(-2deg); }
+            20%, 40%, 60%, 80% { transform: rotate(2deg); }
+        }
+
+        .hero h1 {
+            font-size: 5.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+            text-shadow: 3px 4px 0 #CC7A00, 6px 8px 25px rgba(245, 166, 35, 0.5);
+        }
+
+        .hero h1 .highlight {
+            color: var(--dark-bg);
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            color: var(--dark-bg);
+            font-weight: 600;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+        }
+
+        .savings-display {
+            background: white;
+            border-radius: 25px;
+            padding: 3rem;
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .price-box {
+            text-align: center;
+        }
+
+        .price-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .price-old {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #ccc;
+            text-decoration: line-through;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-new {
+            font-size: 4.5rem;
+            font-weight: 900;
+            color: var(--success-green);
+            line-height: 1;
+        }
+
+        .monthly-price {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+
+        .monthly-price span {
+            color: var(--success-green);
+            font-weight: 800;
+            font-size: 1.5rem;
+        }
+
+        .arrow {
+            font-size: 4rem;
+            color: var(--primary-yellow);
+            animation: slideRight 1.5s ease-in-out infinite;
+        }
+
+        @keyframes slideRight {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(10px); }
+        }
+
+        .save-badge {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            background: var(--urgent-red);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 50%;
+            font-weight: 900;
+            font-size: 1.3rem;
+            box-shadow: 0 10px 40px rgba(239, 68, 68, 0.5);
+            transform: rotate(15deg);
+            animation: bounce 2s ease infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: rotate(15deg) translateY(0); }
+            50% { transform: rotate(15deg) translateY(-10px); }
+        }
+
+        .cta-primary {
+            display: inline-block;
+            background: var(--dark-bg);
+            color: white;
+            padding: 1.5rem 4rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.4rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-primary::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .cta-primary:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+
+        .trust-line {
+            margin-top: 2rem;
+            font-size: 1rem;
+            color: var(--dark-bg);
+            opacity: 0.8;
+            font-weight: 600;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 100px 3rem;
+            background: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.4rem;
+            color: var(--text-light);
+            margin-bottom: 4rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .benefit-card {
+            background: linear-gradient(135deg, #fff 0%, #fafafa 100%);
+            padding: 2.5rem;
+            border-radius: 25px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(253, 185, 19, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .benefit-card:hover::before {
+            left: 100%;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(253, 185, 19, 0.25);
+            border-color: var(--primary-yellow);
+        }
+
+        .benefit-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .benefit-card p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* What You Get Section */
+        .what-you-get {
+            padding: 100px 3rem;
+            background: var(--light-yellow);
+            position: relative;
+            z-index: 1;
+        }
+
+        .package-display {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 30px;
+            padding: 4rem;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.12);
+            position: relative;
+        }
+
+        .package-badge {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--success-green);
+            color: white;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.3rem;
+            box-shadow: 0 10px 40px rgba(16, 185, 129, 0.4);
+        }
+
+        .package-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .package-list li {
+            padding: 1.5rem 0;
+            border-bottom: 2px solid #f0f0f0;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .package-list li:last-child {
+            border-bottom: none;
+        }
+
+        .package-list li:hover {
+            padding-left: 1rem;
+            color: var(--primary-yellow);
+        }
+
+        .check-icon {
+            width: 35px;
+            height: 35px;
+            background: var(--success-green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .total-value {
+            margin-top: 3rem;
+            padding: 2.5rem;
+            background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--dark-yellow) 100%);
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .total-value h3 {
+            color: var(--dark-bg);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .total-value .value {
+            font-size: 4rem;
+            font-weight: 900;
+            color: white;
+            text-shadow: 2px 3px 0 rgba(0,0,0,0.2);
+        }
+
+        /* Form Section */
+        .form-section {
+            padding: 100px 3rem;
+            background: linear-gradient(135deg, var(--dark-bg) 0%, #2d2d2d 100%);
+            position: relative;
+            z-index: 1;
+        }
+
+        .form-section .section-title {
+            color: white;
+        }
+
+        .form-section .section-subtitle {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 4rem;
+            border-radius: 30px;
+            box-shadow: 0 30px 90px rgba(0,0,0,0.3);
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-dark);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1.2rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+            background: #fafafa;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-yellow);
+            background: white;
+            box-shadow: 0 0 0 4px rgba(253, 185, 19, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .submit-button {
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--dark-yellow) 100%);
+            color: var(--dark-bg);
+            padding: 1.5rem;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.4rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 15px 50px rgba(253, 185, 19, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 60px rgba(253, 185, 19, 0.5);
+        }
+
+        .submit-button:active {
+            transform: translateY(0);
+        }
+
+        .form-privacy {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* Urgency Section */
+        .urgency {
+            padding: 80px 3rem;
+            background: var(--urgent-red);
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .urgency h2 {
+            color: white;
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+        }
+
+        .urgency p {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.5rem;
+            font-weight: 600;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .countdown-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            min-width: 130px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .countdown-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--urgent-red);
+            line-height: 1;
+            display: block;
+        }
+
+        .countdown-label {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.5rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 100px 3rem;
+            background: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #fafafa;
+            padding: 2rem;
+            border-radius: 20px;
+            margin-bottom: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .faq-item:hover {
+            background: white;
+            border-color: var(--primary-yellow);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        .faq-question {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-top: 1rem;
+            line-height: 1.7;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: var(--primary-yellow);
+            font-weight: 900;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            color: white;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+
+            .savings-display {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .arrow {
+                transform: rotate(90deg);
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .countdown {
+                flex-wrap: wrap;
+            }
+
+            nav {
+                padding: 0 1.5rem;
+            }
+
+            .logo img {
+                height: 60px;
+                transform: scale(1.2);
+            }
+
+            .hero, .benefits, .what-you-get, .form-section, .urgency, .faq, .testimonials-section {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: 0 30px 90px rgba(0,0,0,0.3);
+            z-index: 10000;
+            text-align: center;
+            max-width: 500px;
+        }
+
+        .success-message.show {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -60%);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .success-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 9999;
+        }
+
+        .overlay.show {
+            display: block;
+        }
+
+        /* ===== NEUE CONVERSION FEATURES ===== */
+
+        /* 1. Exit Intent Popup */
+        .exit-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.8);
+            background: white;
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: 0 30px 90px rgba(0,0,0,0.3);
+            z-index: 10001;
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .exit-popup.show {
+            display: block;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .exit-popup-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-light);
+            transition: all 0.3s ease;
+        }
+
+        .exit-popup-close:hover {
+            color: var(--urgent-red);
+            transform: rotate(90deg);
+        }
+
+        .exit-popup h3 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .exit-popup-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .exit-popup p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .exit-popup-highlight {
+            background: var(--light-yellow);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            border: 2px solid var(--primary-yellow);
+        }
+
+        .exit-popup-highlight strong {
+            color: var(--urgent-red);
+            font-size: 1.5rem;
+        }
+
+        /* Social Proof Notifications */
+        .social-proof {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: white;
+            padding: 1.2rem 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            z-index: 999;
+            max-width: 350px;
+            opacity: 0;
+            transform: translateX(-400px);
+            transition: all 0.5s ease;
+        }
+
+        .social-proof.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .social-proof-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--success-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .social-proof-text {
+            flex: 1;
+        }
+
+        .social-proof-name {
+            font-weight: 700;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+        }
+
+        .social-proof-action {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 65px;
+            height: 65px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            text-decoration: none;
+            animation: whatsappPulse 2s infinite;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-button svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
+        @keyframes whatsappPulse {
+            0%, 100% {
+                box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4), 0 0 0 15px rgba(37, 211, 102, 0.1);
+            }
+        }
+
+        /* Multi-Step Form */
+        .form-steps {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .form-step-indicator {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .step-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: #999;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .step-circle.active {
+            background: var(--primary-yellow);
+            color: var(--dark-bg);
+            transform: scale(1.15);
+        }
+
+        .step-circle.completed {
+            background: var(--success-green);
+            color: white;
+        }
+
+        .step-line {
+            width: 80px;
+            height: 3px;
+            background: #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .step-line.completed {
+            background: var(--success-green);
+        }
+
+        .form-step-content {
+            display: none;
+        }
+
+        .form-step-content.active {
+            display: block;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-navigation {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .form-navigation button {
+            flex: 1;
+            padding: 1.2rem;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-prev {
+            background: #e0e0e0;
+            color: var(--text-dark);
+        }
+
+        .btn-prev:hover {
+            background: #d0d0d0;
+        }
+
+        .btn-next, .btn-submit-final {
+            background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--dark-yellow) 100%);
+            color: var(--dark-bg);
+            box-shadow: 0 8px 25px rgba(253, 185, 19, 0.3);
+        }
+
+        .btn-next:hover, .btn-submit-final:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(253, 185, 19, 0.4);
+        }
+
+        .error-message {
+            color: var(--urgent-red);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            display: none;
+        }
+
+        .form-group.error input,
+        .form-group.error select {
+            border-color: var(--urgent-red);
+        }
+
+        .form-group.error .error-message {
+            display: block;
+        }
+
+        /* Testimonial Carousel */
+        .testimonials-section {
+            padding: 100px 3rem;
+            background: linear-gradient(135deg, #fafafa 0%, #fff 100%);
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-carousel {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .testimonial-slide {
+            min-width: 100%;
+            padding: 3rem;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .testimonial-stars {
+            font-size: 2rem;
+            color: var(--primary-yellow);
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-text {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .testimonial-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--dark-yellow) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 900;
+            color: white;
+        }
+
+        .testimonial-info h4 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 0.3rem;
+        }
+
+        .testimonial-info p {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .carousel-arrow {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-yellow);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--dark-bg);
+            transition: all 0.3s ease;
+        }
+
+        .carousel-arrow:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(253, 185, 19, 0.4);
+        }
+
+        .carousel-dots {
+            display: flex;
+            gap: 0.8rem;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-dot.active {
+            background: var(--primary-yellow);
+            transform: scale(1.3);
+        }
+
+        /* Sticky CTA Bar */
+        .sticky-cta-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, var(--dark-bg) 0%, #2d2d2d 100%);
+            padding: 1.2rem 3rem 1.2rem 3rem;
+            box-shadow: 0 -8px 30px rgba(0,0,0,0.2);
+            z-index: 998;
+            transform: translateY(100%);
+            transition: all 0.4s ease;
+        }
+
+        .sticky-cta-bar.show {
+            transform: translateY(0);
+        }
+
+        .sticky-cta-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-right: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .sticky-cta-text {
+            color: white;
+        }
+
+        .sticky-cta-text strong {
+            font-size: 1.3rem;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .sticky-cta-text span {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
+        .sticky-cta-button {
+            background: var(--primary-yellow);
+            color: var(--dark-bg);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.1rem;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(253, 185, 19, 0.3);
+        }
+
+        .sticky-cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(253, 185, 19, 0.4);
+        }
+
+        /* Mobile Responsive für neue Features */
+        @media (max-width: 968px) {
+            .exit-popup {
+                padding: 2rem 1.5rem;
+                max-width: 90%;
+            }
+
+            .exit-popup h3 {
+                font-size: 1.8rem;
+            }
+
+            .social-proof {
+                left: 15px;
+                bottom: 100px;
+                max-width: calc(100% - 30px);
+                padding: 1rem;
+            }
+
+            .whatsapp-button {
+                width: 55px;
+                height: 55px;
+                bottom: 20px;
+                right: 15px;
+            }
+
+            .whatsapp-button svg {
+                width: 28px;
+                height: 28px;
+            }
+
+            .step-line {
+                width: 40px;
+            }
+
+            .step-circle {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+
+            .testimonials-section {
+                padding: 80px 1.5rem;
+            }
+
+            .testimonial-slide {
+                padding: 2rem 1.5rem;
+            }
+
+            .testimonial-text {
+                font-size: 1.1rem;
+            }
+
+            .sticky-cta-bar {
+                padding: 1rem 1.5rem;
+            }
+
+            .sticky-cta-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+                padding-right: 0;
+                padding-bottom: 80px;
+            }
+
+            .sticky-cta-text strong {
+                font-size: 1.1rem;
+            }
+
+            .sticky-cta-button {
+                width: 100%;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Decorations -->
+    <div class="bg-decoration bg-circle-1"></div>
+    <div class="bg-decoration bg-circle-2"></div>
+    <div class="bg-decoration bg-circle-3"></div>
+
+    <!-- Exit Intent Popup -->
+    <div class="overlay" id="exitOverlay"></div>
+    <div class="exit-popup" id="exitPopup">
+        <button class="exit-popup-close" onclick="closeExitPopup()">×</button>
+        <div class="exit-popup-icon">🎁</div>
+        <h3>Warte! Exklusiver Bonus für dich!</h3>
+        <p>Bevor du gehst – sichere dir zusätzlich zu den 50% Rabatt:</p>
+        <div class="exit-popup-highlight">
+            <strong>3 Monate Premium-Support GRATIS</strong><br>
+            <span style="font-size: 1.1rem;">im Wert von 450€ – komplett kostenlos!</span>
+        </div>
+        <p style="font-size: 1rem; margin-bottom: 1.5rem;">
+            ✓ Persönlicher Ansprechpartner<br>
+            ✓ Priority-Support innerhalb 2 Stunden<br>
+            ✓ Kostenlose Menü-Updates & Anpassungen
+        </p>
+        <a href="#formular" class="cta-primary" onclick="closeExitPopup()" style="display: inline-block; padding: 1.2rem 3rem; font-size: 1.2rem;">
+            Jetzt Bonus sichern! 🚀
+        </a>
+    </div>
+
+    <!-- Social Proof Notification -->
+    <div class="social-proof" id="socialProof">
+        <div class="social-proof-icon">✓</div>
+        <div class="social-proof-text">
+            <div class="social-proof-name" id="socialProofName">Restaurant Name</div>
+            <div class="social-proof-action">hat sich gerade angemeldet</div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/4916245218790?text=Hallo%20ORDABLE%20Team%2C%20ich%20interessiere%20mich%20f%C3%BCr%20das%20Presales-Angebot%20und%20h%C3%A4tte%20gerne%20mehr%20Informationen!" 
+       class="whatsapp-button" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       title="Kontaktiere uns auf WhatsApp">
+        <svg viewBox="0 0 32 32">
+            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-4.713 1.262 1.262-4.669-0.292-0.508c-1.207-2.100-1.847-4.507-1.847-6.978 0-7.51 6.11-13.62 13.62-13.62s13.62 6.11 13.62 13.62-6.11 13.62-13.62 13.62zM21.305 19.26c-0.346-0.174-2.049-1.007-2.366-1.123-0.316-0.117-0.547-0.174-0.776 0.174s-0.892 1.123-1.094 1.347c-0.201 0.227-0.402 0.254-0.748 0.080s-1.458-0.537-2.775-1.711c-1.025-0.913-1.719-2.040-1.920-2.387s-0.022-0.534 0.152-0.707c0.156-0.155 0.346-0.402 0.518-0.603s0.231-0.347 0.346-0.574c0.116-0.231 0.058-0.431-0.028-0.607s-0.776-1.87-1.063-2.565c-0.280-0.672-0.56-0.58-0.776-0.592-0.201-0.010-0.431-0.012-0.661-0.012s-0.603 0.085-0.92 0.431c-0.316 0.346-1.206 1.179-1.206 2.873s1.235 3.333 1.406 3.561c0.174 0.227 2.413 3.681 5.845 5.165 0.817 0.354 1.454 0.565 1.951 0.722 0.819 0.262 1.564 0.225 2.153 0.137 0.657-0.098 2.049-0.833 2.336-1.647 0.288-0.813 0.288-1.511 0.201-1.647-0.085-0.142-0.316-0.227-0.662-0.401z"/>
+        </svg>
+    </a>
+
+    <!-- Sticky CTA Bar -->
+    <div class="sticky-cta-bar" id="stickyCta">
+        <div class="sticky-cta-content">
+            <div class="sticky-cta-text">
+                <strong>🔥 Presales-Angebot: 50% Rabatt sichern!</strong>
+                <span>Spare jetzt 1.250€ beim Setup-Preis</span>
+            </div>
+            <a href="#formular" class="sticky-cta-button">Jetzt Platz sichern 🚀</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">
+                <img src="../bilder/header.png" alt="Ordable Logo">
+            </a>
+            <a href="#formular" class="cta-header">⚡ Jetzt Presales sichern!</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="urgent-badge">🔥 LIMITIERTES PRESALES-ANGEBOT</div>
+            <h1>
+                Deine Restaurant-<br>Revolution startet JETZT
+                <span class="highlight">50% SETUP-RABATT!</span>
+            </h1>
+            <p class="hero-subtitle">
+                Die ersten 50 Gastronomen erhalten unser komplettes System zum exklusiven Frühbucher-Preis
+            </p>
+
+            <div class="savings-display">
+                <div class="save-badge">-50%</div>
+                <div class="price-box">
+                    <div class="price-label">Regulär</div>
+                    <div class="price-old">2.500€</div>
+                    <p style="color: #ccc; font-weight: 600;">Setup-Gebühr</p>
+                </div>
+                
+                <div class="arrow">→</div>
+                
+                <div class="price-box">
+                    <div class="price-label">Presales</div>
+                    <div class="price-new">1.250€</div>
+                    <p style="color: var(--success-green); font-weight: 700;">Du sparst 1.250€!</p>
+                    <div class="monthly-price">
+                        + nur <span>250€</span> monatlich
+                    </div>
+                </div>
+            </div>
+
+            <a href="#formular" class="cta-primary">
+                Jetzt Presales-Platz sichern 🚀
+            </a>
+            <p class="trust-line">✓ Keine versteckten Kosten · ✓ Jederzeit kündbar · ✓ 100% Provisionsfrei</p>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <h2 class="section-title">Was du mit Ordable bekommst</h2>
+        <p class="section-subtitle">
+            Eine zentrale Verwaltung für Website, App & Kassensystem – alles unter deinem Brand, ohne Provisionen
+        </p>
+        
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <span class="benefit-icon">🌐</span>
+                <h3>Deine eigene Website</h3>
+                <p>Professionelle Restaurant-Website mit Online-Bestellsystem für Lieferung & Abholung. Komplett unter deinem Brand. Inklusive Tischreservierung mit grafischer Platzauswahl.</p>
+            </div>
+
+            <div class="benefit-card">
+                <span class="benefit-icon">📱</span>
+                <h3>Deine eigene App</h3>
+                <p>Restaurant-App im App Store & Google Play. Mit deinem Logo, deinem Namen. Direkter Draht zu deinen Kunden – für iOS und Android.</p>
+            </div>
+
+            <div class="benefit-card">
+                <span class="benefit-icon">💳</span>
+                <h3>Professionelles Kassensystem</h3>
+                <p>Modernes Kassensystem mit Hardware & Bondrucker. TSE-konform und finanzamtsicher. Alle Bestellungen aus allen Kanälen zentral an einem Ort.</p>
+            </div>
+
+            <div class="benefit-card">
+                <span class="benefit-icon">⚙️</span>
+                <h3>Zentrale Verwaltung</h3>
+                <p>Ein Admin-Dashboard für ALLES. Menü ändern, Preise anpassen, Bestellungen verwalten, Statistiken einsehen – alles in einem System.</p>
+            </div>
+
+            <div class="benefit-card">
+                <span class="benefit-icon">💰</span>
+                <h3>0% Provision</h3>
+                <p>Keine Provisionen pro Bestellung. Fester monatlicher Preis statt 13-30% Abgaben. Spare tausende Euro pro Jahr und behalte deine Gewinne.</p>
+            </div>
+
+            <div class="benefit-card">
+                <span class="benefit-icon">🎯</span>
+                <h3>Volle Kontrolle</h3>
+                <p>Alle Kundendaten gehören DIR. Direkter Kontakt zu deinen Gästen. Keine Abhängigkeit von Drittplattformen. Deine Marke, deine Regeln.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Get Section -->
+    <section class="what-you-get">
+        <h2 class="section-title">Das Komplettpaket für 1.250€ Setup</h2>
+        <p class="section-subtitle">
+            Alles was du brauchst, um durchzustarten – normalerweise 2.500€, jetzt für die ersten 50 Gastronomen
+        </p>
+
+        <div class="package-display">
+            <div class="package-badge">PRESALES PREMIUM</div>
+            
+            <ul class="package-list">
+                <li>
+                    <span class="check-icon">✓</span>
+                    <span><strong>Eigene Restaurant-Website</strong> – Professionell, responsive, mit Online-Bestellsystem</span>
+                </li>
+                <li>
+                    <span class="check-icon">✓</span>
+                    <span><strong>Eigene Restaurant-App</strong> – iOS & Android, in den App Stores verfügbar</span>
+                </li>
+                <li>
+                    <span class="check-icon">✓</span>
+                    <span><strong>Kassensystem mit Hardware</strong> – Tablet, Bondrucker & TSE-Modul inklusive</span>
+                </li>
+                <li>
+                    <span class="check-icon">✓</span>
+                    <span><strong>Admin-Dashboard</strong> – Zentrale Verwaltung für alles</span>
+                </li>
+                <li>
+                    <span class="check-icon">✓</span>
+                    <span><strong>Bestellmanagement</strong> – Alle Kanäle in einem System</span>
+                </li>
+                <li>
+                    <span class="check-icon">✓</span>
+                    <span><strong>Tischreservierung</strong> – Mit grafischer Tischauswahl</span>
+                </li>
+                <li>
+                    <span class="check-icon">✓</span>
+                    <span><strong>Kundenverwaltung</strong> – Bestellhistorie & Kundendaten</span>
+                </li>
+                <li>
+                    <span class="check-icon">✓</span>
+                    <span><strong>Statistiken & Analytics</strong> – Umsätze, Trends & Auswertungen</span>
+                </li>
+                <li>
+                    <span class="check-icon">✓</span>
+                    <span><strong>Installation & Einrichtung</strong> – Wir machen alles für dich</span>
+                </li>
+                <li>
+                    <span class="check-icon">✓</span>
+                    <span><strong>Schulung deines Teams</strong> – Vor Ort oder online</span>
+                </li>
+                <li>
+                    <span class="check-icon">✓</span>
+                    <span><strong>Premium Support</strong> – Persönlicher Ansprechpartner</span>
+                </li>
+            </ul>
+
+            <div class="total-value">
+                <h3>Gesamtwert des Pakets</h3>
+                <div class="value">Unbezahlbar</div>
+                <p style="color: var(--dark-bg); font-size: 1.2rem; font-weight: 700; margin-top: 1rem;">
+                    Dein Investment: Nur 1.250€ Setup + 250€/Monat
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency Section -->
+    <section class="urgency">
+        <h2>⏰ Die Zeit läuft!</h2>
+        <p>
+            Nur die ersten 50 Gastronomen erhalten diesen exklusiven Presales-Rabatt.<br>
+            Danach steigt der Setup-Preis wieder auf 2.500€.
+        </p>
+        
+        <div class="countdown" id="countdown">
+            <div class="countdown-item">
+                <span class="countdown-number" id="days">--</span>
+                <span class="countdown-label">Tage</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="hours">--</span>
+                <span class="countdown-label">Stunden</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="minutes">--</span>
+                <span class="countdown-label">Minuten</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="seconds">--</span>
+                <span class="countdown-label">Sekunden</span>
+            </div>
+        </div>
+
+        <a href="#formular" class="cta-primary" style="background: white; color: var(--urgent-red);">
+            Jetzt sichern bevor es zu spät ist! 🔥
+        </a>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <h2 class="section-title">Das sagen unsere Gastronomen</h2>
+        <p class="section-subtitle">
+            Echte Erfahrungen von Restaurants, die bereits mit ORDABLE arbeiten
+        </p>
+
+        <div class="testimonial-carousel">
+            <div class="testimonial-track" id="testimonialTrack">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-slide">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "Seit wir mit ORDABLE arbeiten, sparen wir monatlich über 2.000€ an Provisionen! 
+                        Die eigene App war für uns ein Gamechanger – endlich haben wir direkten Kontakt zu unseren Kunden. 
+                        Das System ist intuitiv und der Support einfach top!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MK</div>
+                        <div class="testimonial-info">
+                            <h4>Marco Kühn</h4>
+                            <p>Bella Italia, Hamburg</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-slide">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "Die Einrichtung war super einfach und in nur 2 Wochen waren wir live! 
+                        Besonders begeistert bin ich vom Kassensystem – alles läuft über ein System, 
+                        egal ob Bestellung über die Website, App oder vor Ort. Absolute Empfehlung!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SB</div>
+                        <div class="testimonial-info">
+                            <h4>Sarah Berger</h4>
+                            <p>Sushi Dreams, München</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-slide">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "Endlich keine Abhängigkeit mehr von Lieferando & Co! Mit ORDABLE haben wir volle Kontrolle 
+                        über unsere Bestellungen und Kundendaten. Der Presales-Preis war unschlagbar – 
+                        beste Investition für unser Restaurant!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">TA</div>
+                        <div class="testimonial-info">
+                            <h4>Thomas Aydin</h4>
+                            <p>Döner König, Berlin</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <button class="carousel-arrow" id="prevBtn" aria-label="Vorheriges Testimonial">‹</button>
+                <div class="carousel-dots">
+                    <button class="carousel-dot active" data-slide="0" aria-label="Testimonial 1"></button>
+                    <button class="carousel-dot" data-slide="1" aria-label="Testimonial 2"></button>
+                    <button class="carousel-dot" data-slide="2" aria-label="Testimonial 3"></button>
+                </div>
+                <button class="carousel-arrow" id="nextBtn" aria-label="Nächstes Testimonial">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section" id="formular">
+        <h2 class="section-title">Sichere dir jetzt deinen Presales-Platz!</h2>
+        <p class="section-subtitle">
+            Fülle das Formular aus und wir melden uns innerhalb von 24 Stunden bei dir für ein kostenloses Beratungsgespräch.
+        </p>
+
+        <div class="form-container">
+            <!-- Multi-Step Progress Indicator -->
+            <div class="form-steps">
+                <div class="form-step-indicator">
+                    <div class="step-circle active" data-step="1">1</div>
+                    <div class="step-line"></div>
+                    <div class="step-circle" data-step="2">2</div>
+                    <div class="step-line"></div>
+                    <div class="step-circle" data-step="3">3</div>
+                </div>
+            </div>
+
+            <form id="presalesForm">
+                <!-- Step 1: Persönliche Daten -->
+                <div class="form-step-content active" data-step="1">
+                    <h3 style="text-align: center; margin-bottom: 2rem; color: var(--text-dark); font-size: 1.6rem;">
+                        Schritt 1: Deine Kontaktdaten
+                    </h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="vorname">Vorname *</label>
+                            <input type="text" id="vorname" name="vorname" placeholder="Max" data-required="true">
+                            <div class="error-message">Bitte gib deinen Vornamen ein</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="nachname">Nachname *</label>
+                            <input type="text" id="nachname" name="nachname" placeholder="Mustermann" data-required="true">
+                            <div class="error-message">Bitte gib deinen Nachnamen ein</div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">E-Mail-Adresse *</label>
+                            <input type="email" id="email" name="email" placeholder="max@beispiel.de" data-required="true">
+                            <div class="error-message">Bitte gib eine gültige E-Mail-Adresse ein</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefon">Telefonnummer *</label>
+                            <input type="tel" id="telefon" name="telefon" placeholder="+49 123 456789" data-required="true">
+                            <div class="error-message">Bitte gib deine Telefonnummer ein</div>
+                        </div>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="btn-next" onclick="nextStep(2)">
+                            Weiter →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Restaurant-Informationen -->
+                <div class="form-step-content" data-step="2">
+                    <h3 style="text-align: center; margin-bottom: 2rem; color: var(--text-dark); font-size: 1.6rem;">
+                        Schritt 2: Dein Restaurant
+                    </h3>
+                    
+                    <div class="form-group">
+                        <label for="restaurant">Name deines Restaurants *</label>
+                        <input type="text" id="restaurant" name="restaurant" placeholder="Mein Restaurant" data-required="true">
+                        <div class="error-message">Bitte gib den Namen deines Restaurants ein</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="stadt">Stadt *</label>
+                        <input type="text" id="stadt" name="stadt" placeholder="Berlin" data-required="true">
+                        <div class="error-message">Bitte gib deine Stadt ein</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="paket">Welches Paket interessiert dich? *</label>
+                        <select id="paket" name="paket" data-required="true">
+                            <option value="">Bitte auswählen...</option>
+                            <option value="komplett">Komplettpaket (Website + App + Kassensystem)</option>
+                            <option value="website-app">Website + App</option>
+                            <option value="website">Nur Website</option>
+                            <option value="beratung">Ich bin mir noch nicht sicher – Beratung gewünscht</option>
+                        </select>
+                        <div class="error-message">Bitte wähle ein Paket aus</div>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="btn-prev" onclick="prevStep(1)">
+                            ← Zurück
+                        </button>
+                        <button type="button" class="btn-next" onclick="nextStep(3)">
+                            Weiter →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Nachricht & Absenden -->
+                <div class="form-step-content" data-step="3">
+                    <h3 style="text-align: center; margin-bottom: 2rem; color: var(--text-dark); font-size: 1.6rem;">
+                        Schritt 3: Fast geschafft!
+                    </h3>
+                    
+                    <div class="form-group">
+                        <label for="nachricht">Deine Nachricht (optional)</label>
+                        <textarea id="nachricht" name="nachricht" placeholder="Gibt es etwas Besonderes, das wir über dein Restaurant wissen sollten?"></textarea>
+                    </div>
+
+                    <div style="background: var(--light-yellow); padding: 1.5rem; border-radius: 15px; margin-bottom: 2rem; border: 2px solid var(--primary-yellow);">
+                        <h4 style="margin-bottom: 1rem; color: var(--text-dark);">✓ Deine Vorteile auf einen Blick:</h4>
+                        <ul style="list-style: none; padding: 0; line-height: 2;">
+                            <li>✓ 50% Rabatt auf Setup-Gebühr (spare 1.250€)</li>
+                            <li>✓ Nur 250€/Monat statt 350€</li>
+                            <li>✓ 0% Provision auf Bestellungen</li>
+                            <li>✓ Komplettpaket inkl. Hardware</li>
+                            <li>✓ Kostenlose Einrichtung & Schulung</li>
+                        </ul>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="btn-prev" onclick="prevStep(2)">
+                            ← Zurück
+                        </button>
+                        <button type="submit" class="btn-submit-final">
+                            🚀 Jetzt Presales-Platz sichern!
+                        </button>
+                    </div>
+
+                    <p class="form-privacy">
+                        Mit dem Absenden des Formulars stimmst du unserer Datenschutzerklärung zu.<br>
+                        Wir melden uns innerhalb von 24 Stunden bei dir.
+                    </p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <h2 class="section-title">Häufig gestellte Fragen</h2>
+        <p class="section-subtitle">
+            Alles was du über unser Presales-Angebot wissen musst
+        </p>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    Warum ist das Presales-Angebot so günstig?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Wir sind in der Presales-Phase und wollen die ersten 50 Gastronomen als Partner gewinnen. Diese können uns wertvolles Feedback geben und uns weiterempfehlen. Deshalb bieten wir einen exklusiven Rabatt von 50% auf die Setup-Gebühr.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Was kostet mich Ordable nach dem Setup?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Der Presales-Frühbucher-Preis liegt bei 250€ pro Monat (statt regulär 350€). Darin ist alles enthalten: Website, App, Kassensystem, Support, Updates – keine versteckten Kosten, keine Provisionen.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Gibt es eine Mindestvertragslaufzeit?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Nein! Du kannst jederzeit mit einer Frist von 30 Tagen kündigen. Wir sind von unserer Lösung überzeugt und wollen, dass du aus Überzeugung dabei bleibst – nicht wegen Vertragsbindung.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Wie lange dauert die Einrichtung?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Die komplette Einrichtung dauert in der Regel 2-3 Wochen. Website und App sind oft schon nach 1 Woche live. Das Kassensystem wird bei dir vor Ort installiert und eingerichtet – inklusive Schulung deines Teams.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Fallen wirklich keine Provisionen an?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Absolut! 0% Provision auf jede Bestellung. Du zahlst nur den festen monatlichen Preis. Egal ob du 100 oder 10.000 Bestellungen im Monat hast – der Preis bleibt gleich.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Was passiert mit meinen Kundendaten?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Alle Kundendaten gehören DIR! Im Gegensatz zu Lieferplattformen behältst du die vollständige Kontrolle über deine Kundendaten und kannst diese für Marketing, Newsletter und Kundenbindung nutzen.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Ist das Kassensystem finanzamtsicher?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Ja, unser Kassensystem ist TSE-konform und erfüllt alle deutschen Anforderungen. Alle Belege werden automatisch gespeichert und sind jederzeit für Betriebsprüfungen verfügbar.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Kann ich mein Menü selbst verwalten?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Absolut! Über das Admin-Dashboard kannst du jederzeit dein Menü bearbeiten, Preise ändern, Produkte hinzufügen oder entfernen. Die Änderungen werden sofort auf Website, App und Kasse synchronisiert.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 ORDABLE - Dein digitales Restaurant-System. Alle Rechte vorbehalten.</p>
+        <p style="margin-top: 1rem; opacity: 0.6;">
+            📱 +49 (0) 162 4521879 · ✉️ info@ordable.io · 🌐 www.ordable.io
+        </p>
+    </footer>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <div class="success-icon">🎉</div>
+        <h2 style="margin-bottom: 1rem; font-size: 2rem;">Perfekt!</h2>
+        <p style="font-size: 1.2rem; color: var(--text-light); margin-bottom: 2rem;">
+            Deine Anfrage wurde erfolgreich versendet.<br>
+            Wir melden uns innerhalb von 24 Stunden bei dir!
+        </p>
+        <button onclick="closeSuccess()" style="background: var(--primary-yellow); color: var(--dark-bg); padding: 1rem 2rem; border: none; border-radius: 10px; font-weight: 700; cursor: pointer; font-size: 1.1rem;">
+            Verstanden
+        </button>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // ===== COUNTDOWN TIMER =====
+        function updateCountdown() {
+            const now = new Date();
+            const endDate = new Date(now.getTime() + (30 * 24 * 60 * 60 * 1000));
+            
+            const diff = endDate - now;
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // ===== EXIT-INTENT POPUP =====
+        (function initExitIntent() {
+            const SESSION_KEY = 'ordable_exit_popup_shown';
+            let hasShown = sessionStorage.getItem(SESSION_KEY);
+            let exitAttempts = 0;
+            
+            document.addEventListener('mouseleave', function(e) {
+                if (e.clientY <= 0 && !hasShown && exitAttempts === 0) {
+                    exitAttempts++;
+                    showExitPopup();
+                    sessionStorage.setItem(SESSION_KEY, 'true');
+                }
+            });
+        })();
+        
+        function showExitPopup() {
+            document.getElementById('exitOverlay').classList.add('show');
+            document.getElementById('exitPopup').classList.add('show');
+        }
+        
+        function closeExitPopup() {
+            document.getElementById('exitOverlay').classList.remove('show');
+            document.getElementById('exitPopup').classList.remove('show');
+        }
+        
+        // Overlay Click schließt Popup
+        document.getElementById('exitOverlay').addEventListener('click', closeExitPopup);
+
+        // ===== SOCIAL PROOF NOTIFICATIONS =====
+        (function initSocialProof() {
+            const notifications = [
+                { name: 'Restaurant Pizzeria Milano aus Frankfurt', city: 'Frankfurt' },
+                { name: 'Sushi & More aus Köln', city: 'Köln' },
+                { name: 'Burger Palace aus Stuttgart', city: 'Stuttgart' },
+                { name: 'La Trattoria aus Düsseldorf', city: 'Düsseldorf' },
+                { name: 'Thai Kitchen aus Leipzig', city: 'Leipzig' },
+                { name: 'Grillhaus Istanbul aus Dortmund', city: 'Dortmund' },
+                { name: 'Pasta & Vino aus Hannover', city: 'Hannover' },
+                { name: 'China Wok aus Bremen', city: 'Bremen' },
+                { name: 'Döner Express aus Nürnberg', city: 'Nürnberg' },
+                { name: 'Restaurant Athen aus Dresden', city: 'Dresden' }
+            ];
+            
+            let currentIndex = 0;
+            
+            function showNextNotification() {
+                const notification = notifications[currentIndex];
+                const element = document.getElementById('socialProof');
+                
+                document.getElementById('socialProofName').textContent = notification.name;
+                
+                // Zeige Notification
+                element.classList.add('show');
+                
+                // Verstecke nach 5 Sekunden
+                setTimeout(() => {
+                    element.classList.remove('show');
+                }, 5000);
+                
+                // Nächste Notification vorbereiten
+                currentIndex = (currentIndex + 1) % notifications.length;
+                
+                // Zufällige Wartezeit zwischen 15-25 Sekunden
+                const nextDelay = Math.random() * 10000 + 15000;
+                setTimeout(showNextNotification, nextDelay + 5000);
+            }
+            
+            // Erste Notification nach 8 Sekunden
+            setTimeout(showNextNotification, 8000);
+        })();
+
+        // ===== WHATSAPP BUTTON (bereits im HTML) =====
+        // Button ist bereits implementiert und funktional
+
+        // ===== MULTI-STEP FORM =====
+        let currentStep = 1;
+        
+        function nextStep(stepNumber) {
+            // Validiere aktuellen Step
+            if (!validateStep(currentStep)) {
+                return;
+            }
+            
+            // Verstecke aktuellen Step
+            document.querySelector(`.form-step-content[data-step="${currentStep}"]`).classList.remove('active');
+            
+            // Update Step Indicator
+            document.querySelector(`.step-circle[data-step="${currentStep}"]`).classList.remove('active');
+            document.querySelector(`.step-circle[data-step="${currentStep}"]`).classList.add('completed');
+            
+            // Update Line
+            const lines = document.querySelectorAll('.step-line');
+            if (currentStep < 3) {
+                lines[currentStep - 1].classList.add('completed');
+            }
+            
+            // Zeige nächsten Step
+            currentStep = stepNumber;
+            document.querySelector(`.form-step-content[data-step="${currentStep}"]`).classList.add('active');
+            document.querySelector(`.step-circle[data-step="${currentStep}"]`).classList.add('active');
+            
+            // Scroll to form
+            document.getElementById('formular').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        
+        function prevStep(stepNumber) {
+            // Verstecke aktuellen Step
+            document.querySelector(`.form-step-content[data-step="${currentStep}"]`).classList.remove('active');
+            document.querySelector(`.step-circle[data-step="${currentStep}"]`).classList.remove('active');
+            
+            // Update Line
+            const lines = document.querySelectorAll('.step-line');
+            if (stepNumber < 3) {
+                lines[stepNumber].classList.remove('completed');
+            }
+            
+            // Zeige vorherigen Step
+            currentStep = stepNumber;
+            document.querySelector(`.form-step-content[data-step="${currentStep}"]`).classList.add('active');
+            
+            // Update Step Indicator
+            const currentCircle = document.querySelector(`.step-circle[data-step="${currentStep}"]`);
+            currentCircle.classList.remove('completed');
+            currentCircle.classList.add('active');
+            
+            // Scroll to form
+            document.getElementById('formular').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        
+        function validateStep(stepNumber) {
+            const stepContent = document.querySelector(`.form-step-content[data-step="${stepNumber}"]`);
+            const requiredFields = stepContent.querySelectorAll('[data-required="true"]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                const formGroup = field.closest('.form-group');
+                formGroup.classList.remove('error');
+                
+                if (!field.value.trim()) {
+                    formGroup.classList.add('error');
+                    isValid = false;
+                } else if (field.type === 'email' && !isValidEmail(field.value)) {
+                    formGroup.classList.add('error');
+                    isValid = false;
+                } else if (field.tagName === 'SELECT' && field.value === '') {
+                    formGroup.classList.add('error');
+                    isValid = false;
+                }
+            });
+            
+            return isValid;
+        }
+        
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+        
+        // Remove error on input
+        document.querySelectorAll('input, select, textarea').forEach(field => {
+            field.addEventListener('input', function() {
+                const formGroup = this.closest('.form-group');
+                if (formGroup) {
+                    formGroup.classList.remove('error');
+                }
+            });
+        });
+
+        // ===== TESTIMONIAL CAROUSEL =====
+        (function initTestimonialCarousel() {
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.testimonial-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+            const track = document.getElementById('testimonialTrack');
+            const totalSlides = slides.length;
+            let autoRotateInterval;
+            
+            function goToSlide(slideIndex) {
+                currentSlide = slideIndex;
+                track.style.transform = `translateX(-${currentSlide * 100}%)`;
+                
+                // Update dots
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }
+            
+            function nextSlide() {
+                const next = (currentSlide + 1) % totalSlides;
+                goToSlide(next);
+            }
+            
+            function prevSlide() {
+                const prev = (currentSlide - 1 + totalSlides) % totalSlides;
+                goToSlide(prev);
+            }
+            
+            // Auto-rotation alle 6 Sekunden
+            function startAutoRotate() {
+                stopAutoRotate();
+                autoRotateInterval = setInterval(nextSlide, 6000);
+            }
+            
+            function stopAutoRotate() {
+                if (autoRotateInterval) {
+                    clearInterval(autoRotateInterval);
+                }
+            }
+            
+            // Event Listeners
+            document.getElementById('nextBtn').addEventListener('click', () => {
+                nextSlide();
+                startAutoRotate();
+            });
+            
+            document.getElementById('prevBtn').addEventListener('click', () => {
+                prevSlide();
+                startAutoRotate();
+            });
+            
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    goToSlide(index);
+                    startAutoRotate();
+                });
+            });
+            
+            // Pause on hover
+            track.addEventListener('mouseenter', stopAutoRotate);
+            track.addEventListener('mouseleave', startAutoRotate);
+            
+            // Start auto-rotation
+            startAutoRotate();
+        })();
+
+        // ===== STICKY CTA BAR =====
+        (function initStickyCTA() {
+            const stickyBar = document.getElementById('stickyCta');
+            const hero = document.querySelector('.hero');
+            const heroHeight = hero.offsetHeight;
+            
+            window.addEventListener('scroll', () => {
+                const scrollPosition = window.pageYOffset;
+                
+                if (scrollPosition > heroHeight + 200) {
+                    stickyBar.classList.add('show');
+                } else {
+                    stickyBar.classList.remove('show');
+                }
+            });
+        })();
+
+        // ===== FAQ TOGGLE =====
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const wasActive = item.classList.contains('active');
+                
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.faq-toggle').textContent = '+';
+                });
+                
+                if (!wasActive) {
+                    item.classList.add('active');
+                    item.querySelector('.faq-toggle').textContent = '−';
+                }
+            });
+        });
+
+        // ===== FORM SUBMISSION =====
+        document.getElementById('presalesForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validiere letzten Step
+            if (!validateStep(3)) {
+                return;
+            }
+            
+            // Formulardaten sammeln
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            console.log('Formulardaten:', data);
+            
+            // Hier würdest du normalerweise einen API-Call machen:
+            // fetch('/api/presales', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify(data)
+            // })
+            
+            // Success Message anzeigen
+            document.getElementById('exitOverlay').classList.add('show');
+            document.getElementById('successMessage').classList.add('show');
+            
+            // Formular zurücksetzen
+            this.reset();
+            currentStep = 1;
+            document.querySelectorAll('.form-step-content').forEach(step => step.classList.remove('active'));
+            document.querySelector('.form-step-content[data-step="1"]').classList.add('active');
+            document.querySelectorAll('.step-circle').forEach(circle => {
+                circle.classList.remove('active', 'completed');
+            });
+            document.querySelector('.step-circle[data-step="1"]').classList.add('active');
+            document.querySelectorAll('.step-line').forEach(line => line.classList.remove('completed'));
+        });
+
+        function closeSuccess() {
+            document.getElementById('exitOverlay').classList.remove('show');
+            document.getElementById('successMessage').classList.remove('show');
+        }
+
+        // ===== SMOOTH SCROLL =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // ===== HEADER SCROLL EFFECT =====
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                header.style.padding = '0.5rem 0';
+                header.style.boxShadow = '0 4px 30px rgba(0,0,0,0.12)';
+            } else {
+                header.style.padding = '1rem 0';
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
+            }
+        });
+    </script>
+</body>
+</html>

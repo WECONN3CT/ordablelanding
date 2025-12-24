@@ -261,6 +261,8 @@
         .package-badge {
             position: absolute;
             top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
             background: var(--primary);
             color: var(--dark);
             font-size: 0.7rem;
@@ -696,9 +698,9 @@
             .hero-form-header p { font-size: 0.9rem; }
             .form-group input { padding: 0.8rem 0.9rem; font-size: 0.95rem; }
             .package-select { grid-template-columns: 1fr; gap: 0.6rem; }
-            .package-box { padding: 0.9rem; flex-direction: row; justify-content: space-between; align-items: center; }
-            .package-badge { top: auto; left: auto; right: 0.5rem; top: 0.5rem; font-size: 0.6rem; }
-            .package-name { font-size: 0.9rem; }
+            .package-box { padding: 0.9rem 1rem; flex-direction: row; justify-content: space-between; align-items: center; }
+            .package-badge { position: static; transform: none; font-size: 0.55rem; padding: 0.15rem 0.35rem; margin-left: 0.35rem; vertical-align: middle; }
+            .package-name { font-size: 0.9rem; display: inline-flex; align-items: center; }
             .package-price { font-size: 1rem; margin: 0; }
             .package-desc { display: none; }
             .form-submit { padding: 0.9rem; font-size: 0.95rem; }
@@ -814,8 +816,7 @@
                             <label class="package-option">
                                 <input type="radio" name="package" value="ordable-plus">
                                 <div class="package-box">
-                                    <span class="package-badge">Empfohlen</span>
-                                    <span class="package-name">ORDABLE PLUS</span>
+                                    <span class="package-name">ORDABLE PLUS <span class="package-badge">Empfohlen</span></span>
                                     <span class="package-price">199€/Mo</span>
                                     <span class="package-desc">+ Terminal</span>
                                 </div>

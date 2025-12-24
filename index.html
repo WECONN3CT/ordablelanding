@@ -581,32 +581,162 @@
         /* Animations */
         .hero-content, .hero-form { opacity: 0; }
 
-        /* Responsive */
+        /* Responsive - Tablet */
         @media (max-width: 1000px) {
-            .features-grid { grid-template-columns: repeat(2, 1fr); }
-            .process-steps { grid-template-columns: repeat(2, 1fr); }
+            .container { padding: 0 1.5rem; }
+            .features-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+            .process-steps { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+            .hero-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
         }
 
+        /* Responsive - Mobile Large */
         @media (max-width: 800px) {
-            .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
-            .hero h1 { font-size: 2.75rem; }
-            .hero-subtitle { font-size: 1.2rem; }
-            .hero-stats { flex-direction: column; text-align: center; gap: 1rem; }
-            .hero-stats-points { justify-content: center; }
-            .hero-content { padding-top: 0; }
-            .comparison-grid, .pricing-grid { grid-template-columns: 1fr; }
-            .section-header h2 { font-size: 2rem; }
+            .container { padding: 0 1.25rem; }
+            nav { padding: 0.5rem 1.25rem; }
+            .logo img { height: 70px; margin: -15px 0 -15px -0.5rem; }
+            .nav-cta { padding: 0.6rem 1.1rem; font-size: 0.85rem; }
+
+            .hero { padding: 100px 0 50px; min-height: auto; }
+            .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .hero-content { padding-top: 0; text-align: center; }
+            .hero h1 { font-size: 2.25rem; margin-bottom: 1rem; }
+            .hero-subtitle { font-size: 1.05rem; margin-bottom: 1.5rem; }
+            .hero-eyebrow { font-size: 0.8rem; padding: 0.4rem 0.85rem; margin-bottom: 1rem; }
+
+            .hero-stats { margin-top: 1.5rem; padding: 1.25rem; }
+            .hero-stats-top { flex-direction: column; text-align: center; gap: 0.75rem; }
+            .hero-stats-number { font-size: 3rem; }
+            .hero-stats-content strong { font-size: 1rem; }
+            .hero-stats-content p { font-size: 0.9rem; }
+            .hero-stats-points { justify-content: center; flex-wrap: wrap; }
+
+            .hero-form { margin: 0; margin-right: 0; padding: 1.5rem; border-radius: 20px; }
+            .hero-form-header { margin-bottom: 1.25rem; }
+            .hero-form-header h3 { font-size: 1.35rem; }
+            .hero-form-header p { font-size: 0.95rem; }
+            .form-group { margin-bottom: 0.9rem; }
+            .form-group label { font-size: 0.9rem; margin-bottom: 0.4rem; }
+            .form-group input { padding: 0.85rem 1rem; font-size: 1rem; border-radius: 10px; }
+            .form-row { grid-template-columns: 1fr; gap: 0.9rem; }
+            .package-select { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+            .package-box { padding: 1rem 0.75rem; }
+            .package-name { font-size: 0.95rem; }
+            .package-price { font-size: 1.1rem; }
+            .package-desc { font-size: 0.8rem; }
+            .form-submit { padding: 1rem; font-size: 1rem; }
+            .form-hint { font-size: 0.8rem; }
+
+            .content-section { padding: 4rem 0; }
+            .section-header { margin-bottom: 2rem; }
+            .section-header h2 { font-size: 1.75rem; }
+            .section-header p { font-size: 1rem; }
+
+            .features-grid { grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 3rem; }
+            .feature-card { padding: 1.5rem 1rem; border-radius: 16px; }
+            .feature-icon { width: 50px; height: 50px; border-radius: 12px; margin-bottom: 1rem; }
+            .feature-icon svg { width: 26px; height: 26px; }
+            .feature-card h3 { font-size: 1.05rem; margin-bottom: 0.35rem; }
+            .feature-card p { font-size: 0.9rem; }
+
+            .comparison-grid { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 3rem; }
+            .comparison-card { padding: 1.5rem; border-radius: 16px; }
+            .comparison-card h3 { font-size: 1.15rem; margin-bottom: 1rem; }
+            .comparison-card h3 svg { width: 22px; height: 22px; }
+            .comparison-card li { font-size: 0.95rem; padding: 0.65rem 0; }
+            .comparison-card li svg { width: 18px; height: 18px; }
+
+            .process-steps { grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 3rem; }
+            .process-step { padding: 1.25rem 1rem; border-radius: 16px; }
+            .process-num { width: 44px; height: 44px; font-size: 1.1rem; margin-bottom: 0.85rem; }
+            .process-step h4 { font-size: 1rem; }
+            .process-step p { font-size: 0.85rem; }
+
+            .pricing-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .pricing-card { padding: 1.75rem; border-radius: 20px; }
+            .pricing-badge { top: -12px; font-size: 0.75rem; padding: 0.35rem 0.9rem; }
+            .pricing-name { font-size: 1.3rem; }
+            .pricing-desc { font-size: 0.95rem; margin-bottom: 1rem; }
+            .pricing-price { margin-bottom: 1rem; padding-bottom: 1rem; }
+            .price-old { font-size: 1rem; }
+            .price-new { font-size: 2.5rem; }
+            .price-period { font-size: 0.9rem; }
+            .price-setup { font-size: 0.9rem; }
+            .pricing-save { padding: 0.6rem 1rem; font-size: 0.9rem; margin-bottom: 1rem; }
+            .pricing-features { margin-bottom: 1.5rem; }
+            .pricing-features li { font-size: 0.95rem; padding: 0.5rem 0; }
+            .pricing-features li svg { width: 18px; height: 18px; }
+            .pricing-cta { padding: 1rem; font-size: 1rem; }
+            .pricing-note { font-size: 0.9rem; margin-top: 1.5rem; flex-wrap: wrap; text-align: center; }
+
+            footer { padding: 2rem 0; }
+            footer p { font-size: 0.9rem; }
         }
 
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 2.25rem; }
-            .hero-subtitle { font-size: 1.1rem; }
-            .hero-form { padding: 1.75rem; }
-            .form-row, .package-select { grid-template-columns: 1fr; }
-            .features-grid { grid-template-columns: 1fr; }
-            .process-steps { grid-template-columns: 1fr; }
-            .stats-number { font-size: 4.5rem; }
-            .section-header h2 { font-size: 1.75rem; }
+        /* Responsive - Mobile Small */
+        @media (max-width: 480px) {
+            .container { padding: 0 1rem; }
+            nav { padding: 0.4rem 1rem; }
+            .logo img { height: 60px; margin: -12px 0 -12px -0.25rem; }
+            .nav-cta { padding: 0.5rem 0.9rem; font-size: 0.8rem; }
+
+            .hero { padding: 90px 0 40px; }
+            .hero h1 { font-size: 1.85rem; line-height: 1.2; }
+            .hero-subtitle { font-size: 0.95rem; line-height: 1.6; }
+            .hero-eyebrow { font-size: 0.75rem; padding: 0.35rem 0.75rem; }
+
+            .hero-stats { padding: 1rem; }
+            .hero-stats-number { font-size: 2.5rem; }
+            .hero-stats-content strong { font-size: 0.9rem; }
+            .hero-stats-content p { font-size: 0.85rem; }
+            .hero-stats-points span { font-size: 0.7rem; padding: 0.25rem 0.4rem; }
+            .hero-stats-points span svg { width: 10px; height: 10px; }
+
+            .hero-form { padding: 1.25rem; }
+            .hero-form-header h3 { font-size: 1.2rem; }
+            .hero-form-header p { font-size: 0.9rem; }
+            .form-group input { padding: 0.8rem 0.9rem; font-size: 0.95rem; }
+            .package-select { grid-template-columns: 1fr; gap: 0.6rem; }
+            .package-box { padding: 0.9rem; flex-direction: row; justify-content: space-between; align-items: center; }
+            .package-badge { top: auto; left: auto; right: 0.5rem; top: 0.5rem; font-size: 0.6rem; }
+            .package-name { font-size: 0.9rem; }
+            .package-price { font-size: 1rem; margin: 0; }
+            .package-desc { display: none; }
+            .form-submit { padding: 0.9rem; font-size: 0.95rem; }
+
+            .content-section { padding: 3rem 0; }
+            .section-header { margin-bottom: 1.5rem; }
+            .section-header h2 { font-size: 1.5rem; }
+            .section-header p { font-size: 0.9rem; }
+
+            .features-grid { grid-template-columns: 1fr; gap: 0.85rem; margin-bottom: 2.5rem; }
+            .feature-card { padding: 1.25rem; display: flex; flex-direction: row; align-items: center; gap: 1rem; text-align: left; }
+            .feature-icon { margin-bottom: 0; flex-shrink: 0; width: 48px; height: 48px; }
+            .feature-icon svg { width: 24px; height: 24px; }
+            .feature-card h3 { font-size: 1rem; margin-bottom: 0.2rem; }
+            .feature-card p { font-size: 0.85rem; line-height: 1.4; }
+
+            .comparison-grid { gap: 0.85rem; margin-bottom: 2.5rem; }
+            .comparison-card { padding: 1.25rem; }
+            .comparison-card h3 { font-size: 1.05rem; gap: 0.5rem; }
+            .comparison-card h3 svg { width: 20px; height: 20px; }
+            .comparison-card li { font-size: 0.9rem; padding: 0.5rem 0; gap: 0.5rem; }
+            .comparison-card li svg { width: 16px; height: 16px; }
+
+            .process-steps { grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 2.5rem; }
+            .process-step { padding: 1rem 0.75rem; }
+            .process-num { width: 40px; height: 40px; font-size: 1rem; margin-bottom: 0.6rem; }
+            .process-step h4 { font-size: 0.9rem; }
+            .process-step p { font-size: 0.75rem; }
+
+            .pricing-card { padding: 1.5rem; }
+            .pricing-name { font-size: 1.2rem; }
+            .pricing-desc { font-size: 0.9rem; }
+            .price-new { font-size: 2.25rem; }
+            .pricing-features li { font-size: 0.9rem; }
+            .pricing-cta { padding: 0.9rem; font-size: 0.95rem; }
+            .pricing-note { font-size: 0.8rem; }
+
+            footer p { font-size: 0.8rem; }
         }
     </style>
 </head>

@@ -777,7 +777,9 @@
                     </div>
                 </div>
 
-                <form class="hero-form" id="contactForm">
+                <form class="hero-form" id="contactForm" action="https://formspree.io/f/xgovkvjo" method="POST">
+                    <input type="hidden" name="formular_typ" value="Early Bird Formular">
+                    <input type="hidden" name="_subject" value="Neue Early Bird Anfrage - ORDABLE">
                     <div class="hero-form-header">
                         <h3>Early Bird Platz sichern</h3>
                         <p>Unverbindlich registrieren & 50% sparen</p>
@@ -785,30 +787,30 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label>Vorname</label>
-                            <input type="text" required placeholder="Max">
+                            <input type="text" name="vorname" required placeholder="Max">
                         </div>
                         <div class="form-group">
                             <label>Nachname</label>
-                            <input type="text" required placeholder="Mustermann">
+                            <input type="text" name="nachname" required placeholder="Mustermann">
                         </div>
                     </div>
                     <div class="form-group">
                         <label>Restaurant Name</label>
-                        <input type="text" required placeholder="Dein Restaurant">
+                        <input type="text" name="restaurant" required placeholder="Dein Restaurant">
                     </div>
                     <div class="form-group">
                         <label>E-Mail</label>
-                        <input type="email" required placeholder="max@restaurant.de">
+                        <input type="email" name="email" required placeholder="max@restaurant.de">
                     </div>
                     <div class="form-group">
                         <label>Telefon</label>
-                        <input type="tel" required placeholder="+49 123 456789">
+                        <input type="tel" name="telefon" required placeholder="+49 123 456789">
                     </div>
                     <div class="form-group">
                         <label>Paket wählen</label>
                         <div class="package-select">
                             <label class="package-option">
-                                <input type="radio" name="package" value="ordable" required>
+                                <input type="radio" name="paket" value="ORDABLE (149€/Mo - Website + App)" required>
                                 <div class="package-box">
                                     <span class="package-name">ORDABLE</span>
                                     <span class="package-price">149€/Mo</span>
@@ -816,7 +818,7 @@
                                 </div>
                             </label>
                             <label class="package-option">
-                                <input type="radio" name="package" value="ordable-plus">
+                                <input type="radio" name="paket" value="ORDABLE PLUS (199€/Mo - Website + App + Terminal)">
                                 <div class="package-box">
                                     <span class="package-name">ORDABLE PLUS <span class="package-badge">Empfohlen</span></span>
                                     <span class="package-price">199€/Mo</span>
@@ -1031,11 +1033,48 @@
             }
         );
 
-        // Form
+        // Form - Formspree AJAX Submit
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Vielen Dank! Wir melden uns innerhalb von 24 Stunden bei dir.');
-            this.reset();
+            const form = this;
+            const submitBtn = form.querySelector('.form-submit');
+            const originalText = submitBtn.innerHTML;
+
+            submitBtn.innerHTML = '<i data-lucide="loader-2"></i> Wird gesendet...';
+            submitBtn.disabled = true;
+
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(response => {
+                if (response.ok) {
+                    submitBtn.innerHTML = '<i data-lucide="check"></i> Erfolgreich gesendet!';
+                    submitBtn.style.background = '#10b981';
+                    form.reset();
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.style.background = '';
+                        submitBtn.disabled = false;
+                        lucide.createIcons();
+                    }, 3000);
+                } else {
+                    throw new Error('Fehler beim Senden');
+                }
+            })
+            .catch(error => {
+                submitBtn.innerHTML = '<i data-lucide="x"></i> Fehler - Bitte erneut versuchen';
+                submitBtn.style.background = '#ef4444';
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.style.background = '';
+                    submitBtn.disabled = false;
+                    lucide.createIcons();
+                }, 3000);
+            });
+
+            lucide.createIcons();
         });
     </script>
 </body>

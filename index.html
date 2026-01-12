@@ -15,7 +15,7 @@
                 .then(data => {
                     // Redirect UK visitors to English version
                     if (data.country === 'GB') {
-                        window.location.href = 'en.html';
+                        window.location.href = 'en/';
                     }
                 })
                 .catch(() => {
@@ -794,7 +794,7 @@
             <div style="display: flex; align-items: center;">
                 <div class="lang-switch">
                     <a href="index.html" class="active" onclick="sessionStorage.setItem('lang_override', 'de');">DE</a>
-                    <a href="en.html" onclick="sessionStorage.setItem('lang_override', 'en');">EN</a>
+                    <a href="en/" onclick="sessionStorage.setItem('lang_override', 'en');">EN</a>
                 </div>
                 <a href="#" class="nav-cta" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Jetzt starten</a>
             </div>

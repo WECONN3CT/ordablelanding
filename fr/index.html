@@ -1,30 +1,9 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ORDABLE | Dein digitales Restaurant-System - 0% Provision</title>
-    <!-- Geo-IP Redirect for international visitors -->
-    <script>
-        (function() {
-            // Check if user manually selected German version
-            if (sessionStorage.getItem('lang_override') === 'de') return;
-
-            fetch('https://api.country.is/')
-                .then(response => response.json())
-                .then(data => {
-                    // Redirect visitors based on country
-                    if (data.country === 'GB') {
-                        window.location.href = 'en/';
-                    } else if (data.country === 'FR') {
-                        window.location.href = 'fr/';
-                    }
-                })
-                .catch(() => {
-                    // On error, stay on German version
-                });
-        })();
-    </script>
+    <title>ORDABLE | Votre système de restaurant digital - 0% commission</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -792,14 +771,14 @@
 <body>
     <header>
         <nav>
-            <a href="#" class="logo"><img src="header.png" alt="Ordable"></a>
+            <a href="#" class="logo"><img src="../header.png" alt="Ordable"></a>
             <div style="display: flex; align-items: center;">
                 <div class="lang-switch">
-                    <a href="index.html" class="active" onclick="sessionStorage.setItem('lang_override', 'de');">DE</a>
-                    <a href="en/" onclick="sessionStorage.setItem('lang_override', 'en');">EN</a>
-                    <a href="fr/" onclick="sessionStorage.setItem('lang_override', 'fr');">FR</a>
+                    <a href="../" onclick="sessionStorage.setItem('lang_override', 'de');">DE</a>
+                    <a href="../en/" onclick="sessionStorage.setItem('lang_override', 'en');">EN</a>
+                    <a href="./" class="active" onclick="sessionStorage.setItem('lang_override', 'fr');">FR</a>
                 </div>
-                <a href="#" class="nav-cta" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Jetzt starten</a>
+                <a href="#" class="nav-cta" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Commencer</a>
             </div>
         </nav>
     </header>
@@ -809,71 +788,71 @@
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-content">
-                    <div class="hero-eyebrow">Nur noch wenige Early Bird Plätze</div>
-                    <h1>Dein Restaurant.<br><span>Deine Plattform.</span></h1>
-                    <p class="hero-subtitle">Eigene Website, eigene App, 0% Provision. Werde unabhängig von Lieferplattformen und behalte deinen Gewinn. Wir melden uns innerhalb von 24h.</p>
+                    <div class="hero-eyebrow">Dernières places Early Bird disponibles</div>
+                    <h1>Votre restaurant.<br><span>Votre plateforme.</span></h1>
+                    <p class="hero-subtitle">Votre site web, votre application, 0% de commission. Devenez indépendant des plateformes de livraison et conservez vos bénéfices. Nous vous contactons sous 24h.</p>
 
                     <div class="hero-stats">
                         <div class="hero-stats-top">
                             <div class="hero-stats-number">30<span>%</span></div>
                             <div class="hero-stats-content">
-                                <strong>Provision verlierst du an Lieferplattformen</strong>
-                                <p>Bei 10.000€ Umsatz = 3.000€ weg. Mit ORDABLE: 0%</p>
+                                <strong>Commission perdue sur les plateformes</strong>
+                                <p>Sur 10 000€ de chiffre d'affaires = 3 000€ perdus. Avec ORDABLE : 0%</p>
                             </div>
                         </div>
                         <div class="hero-stats-points">
-                            <span><i data-lucide="x"></i> Fremdes Branding</span>
-                            <span><i data-lucide="x"></i> Keine Kundendaten</span>
-                            <span><i data-lucide="x"></i> Abhängigkeit</span>
+                            <span><i data-lucide="x"></i> Image externe</span>
+                            <span><i data-lucide="x"></i> Pas de données</span>
+                            <span><i data-lucide="x"></i> Dépendance</span>
                         </div>
                     </div>
                 </div>
 
                 <form class="hero-form" id="contactForm" action="https://formspree.io/f/xgovkvjo" method="POST">
-                    <input type="hidden" name="formular_typ" value="Early Bird Formular">
-                    <input type="hidden" name="_subject" value="Neue Early Bird Anfrage - ORDABLE">
+                    <input type="hidden" name="formular_typ" value="Formulaire Early Bird (FR)">
+                    <input type="hidden" name="_subject" value="Nouvelle demande Early Bird - ORDABLE France">
                     <div class="hero-form-header">
-                        <h3>Early Bird Platz sichern</h3>
-                        <p>Unverbindlich registrieren & 50% sparen</p>
+                        <h3>Réserver votre place Early Bird</h3>
+                        <p>Inscription sans engagement et 50% d'économies</p>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Vorname</label>
-                            <input type="text" name="vorname" required placeholder="Max">
+                            <label>Prénom</label>
+                            <input type="text" name="vorname" required placeholder="Jean">
                         </div>
                         <div class="form-group">
-                            <label>Nachname</label>
-                            <input type="text" name="nachname" required placeholder="Mustermann">
+                            <label>Nom</label>
+                            <input type="text" name="nachname" required placeholder="Dupont">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Restaurant Name</label>
-                        <input type="text" name="restaurant" required placeholder="Dein Restaurant">
+                        <label>Nom du restaurant</label>
+                        <input type="text" name="restaurant" required placeholder="Votre restaurant">
                     </div>
                     <div class="form-group">
-                        <label>E-Mail</label>
-                        <input type="email" name="email" required placeholder="max@restaurant.de">
+                        <label>E-mail</label>
+                        <input type="email" name="email" required placeholder="jean@restaurant.fr">
                     </div>
                     <div class="form-group">
-                        <label>Telefon</label>
-                        <input type="tel" name="telefon" required placeholder="+49 123 456789">
+                        <label>Téléphone</label>
+                        <input type="tel" name="telefon" required placeholder="+33 1 23 45 67 89">
                     </div>
                     <div class="form-group">
-                        <label>Paket wählen</label>
+                        <label>Choisir le forfait</label>
                         <div class="package-select">
                             <label class="package-option">
-                                <input type="radio" name="paket" value="ORDABLE (149€/Mo - Website + App)" required>
+                                <input type="radio" name="paket" value="ORDABLE (149€/mois - Site + App)" required>
                                 <div class="package-box">
                                     <span class="package-name">ORDABLE</span>
-                                    <span class="package-price">149€/Mo</span>
-                                    <span class="package-desc">Website + App</span>
+                                    <span class="package-price">149€/mois</span>
+                                    <span class="package-desc">Site web + App</span>
                                 </div>
                             </label>
                             <label class="package-option">
-                                <input type="radio" name="paket" value="ORDABLE PLUS (199€/Mo - Website + App + Terminal)">
+                                <input type="radio" name="paket" value="ORDABLE PLUS (199€/mois - Site + App + Terminal)">
                                 <div class="package-box">
-                                    <span class="package-name">ORDABLE PLUS <span class="package-badge">Empfohlen</span></span>
-                                    <span class="package-price">199€/Mo</span>
+                                    <span class="package-name">ORDABLE PLUS <span class="package-badge">Recommandé</span></span>
+                                    <span class="package-price">199€/mois</span>
                                     <span class="package-desc">+ Terminal</span>
                                 </div>
                             </label>
@@ -881,9 +860,9 @@
                     </div>
                     <button type="submit" class="form-submit">
                         <i data-lucide="arrow-right"></i>
-                        Platz sichern
+                        Réserver ma place
                     </button>
-                    <p class="form-hint"><i data-lucide="lock"></i> Keine Zahlungsdaten erforderlich</p>
+                    <p class="form-hint"><i data-lucide="lock"></i> Aucune carte bancaire requise</p>
                 </form>
             </div>
         </div>
@@ -894,148 +873,148 @@
         <div class="container">
             <!-- Features -->
             <div class="section-header">
-                <h2>Alles was du brauchst, ohne Provision</h2>
-                <p>Ein komplettes System für dein Restaurant</p>
+                <h2>Tout ce dont vous avez besoin, sans commission</h2>
+                <p>Un système complet pour votre restaurant</p>
             </div>
 
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon"><i data-lucide="globe"></i></div>
-                    <h3>Eigene Website</h3>
-                    <p>Professionelle Bestellseite in deinem Branding</p>
+                    <h3>Votre propre site web</h3>
+                    <p>Page de commande professionnelle à votre image</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><i data-lucide="smartphone"></i></div>
-                    <h3>Eigene App</h3>
-                    <p>iOS & Android App im Store unter deinem Namen</p>
+                    <h3>Votre propre application</h3>
+                    <p>Application iOS & Android dans les stores à votre nom</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><i data-lucide="monitor"></i></div>
-                    <h3>Bestellterminal</h3>
-                    <p>Für Vor-Ort Bestellungen (Plus Paket)</p>
+                    <h3>Terminal de commande</h3>
+                    <p>Pour les commandes sur place (Forfait Plus)</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><i data-lucide="layout-dashboard"></i></div>
-                    <h3>Dashboard</h3>
-                    <p>Alle Bestellungen und Statistiken im Blick</p>
+                    <h3>Tableau de bord</h3>
+                    <p>Toutes vos commandes et statistiques en un coup d'œil</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><i data-lucide="sparkles"></i></div>
-                    <h3>KI-Produktbilder</h3>
-                    <p>Automatisch generierte Fotos deiner Gerichte</p>
+                    <h3>Photos par IA</h3>
+                    <p>Photos générées automatiquement de vos plats</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><i data-lucide="percent"></i></div>
-                    <h3>0% Provision</h3>
-                    <p>Keine versteckten Kosten, keine Umsatzbeteiligung</p>
+                    <h3>0% de commission</h3>
+                    <p>Aucun frais caché, pas de partage des revenus</p>
                 </div>
             </div>
 
             <!-- Comparison -->
             <div class="comparison-grid">
                 <div class="comparison-card negative">
-                    <h3><i data-lucide="thumbs-down"></i> Lieferplattformen</h3>
+                    <h3><i data-lucide="thumbs-down"></i> Plateformes de livraison</h3>
                     <ul>
-                        <li><i data-lucide="x"></i> Bis zu 30% Provision pro Bestellung</li>
-                        <li><i data-lucide="x"></i> Kunden gehören der Plattform</li>
-                        <li><i data-lucide="x"></i> Fremdes Branding & Design</li>
-                        <li><i data-lucide="x"></i> Abhängig von Algorithmen</li>
+                        <li><i data-lucide="x"></i> Jusqu'à 30% de commission par commande</li>
+                        <li><i data-lucide="x"></i> Les clients appartiennent à la plateforme</li>
+                        <li><i data-lucide="x"></i> Image de marque et design imposés</li>
+                        <li><i data-lucide="x"></i> Dépendant des algorithmes</li>
                     </ul>
                 </div>
                 <div class="comparison-card positive">
                     <h3><i data-lucide="thumbs-up"></i> ORDABLE</h3>
                     <ul>
-                        <li><i data-lucide="check"></i> 0% Provision - für immer</li>
-                        <li><i data-lucide="check"></i> Alle Kundendaten gehören dir</li>
-                        <li><i data-lucide="check"></i> 100% dein Branding</li>
-                        <li><i data-lucide="check"></i> Volle Kontrolle & Unabhängigkeit</li>
+                        <li><i data-lucide="check"></i> 0% de commission - à vie</li>
+                        <li><i data-lucide="check"></i> Toutes les données clients vous appartiennent</li>
+                        <li><i data-lucide="check"></i> 100% votre image de marque</li>
+                        <li><i data-lucide="check"></i> Contrôle total et indépendance</li>
                     </ul>
                 </div>
             </div>
 
             <!-- Process Steps -->
             <div class="section-header">
-                <h2>So einfach geht's</h2>
-                <p>In 4 Schritten zu deinem eigenen System</p>
+                <h2>Comment ça marche</h2>
+                <p>Votre propre système en 4 étapes</p>
             </div>
 
             <div class="process-steps">
                 <div class="process-step">
                     <div class="process-num">1</div>
-                    <h4>Registrieren</h4>
-                    <p>Du meldest dich unverbindlich an</p>
+                    <h4>Inscription</h4>
+                    <p>Vous vous inscrivez sans engagement</p>
                 </div>
                 <div class="process-step">
                     <div class="process-num">2</div>
-                    <h4>Beratung</h4>
-                    <p>Wir rufen dich innerhalb von 24h an</p>
+                    <h4>Consultation</h4>
+                    <p>Nous vous appelons sous 24h</p>
                 </div>
                 <div class="process-step">
                     <div class="process-num">3</div>
-                    <h4>Einrichtung</h4>
-                    <p>Wir richten alles für dich ein</p>
+                    <h4>Configuration</h4>
+                    <p>Nous configurons tout pour vous</p>
                 </div>
                 <div class="process-step">
                     <div class="process-num">4</div>
-                    <h4>Go Live</h4>
-                    <p>Dein System geht online</p>
+                    <h4>Lancement</h4>
+                    <p>Votre système est en ligne</p>
                 </div>
             </div>
 
             <!-- Pricing -->
             <div class="section-header">
-                <h2>Transparente Preise</h2>
-                <p>50% Early Bird Rabatt - dauerhaft</p>
+                <h2>Tarifs transparents</h2>
+                <p>50% de réduction Early Bird - définitive</p>
             </div>
 
             <div class="pricing-grid">
                 <div class="pricing-card">
                     <div class="pricing-name">ORDABLE</div>
-                    <div class="pricing-desc">Website + App</div>
+                    <div class="pricing-desc">Site web + Application</div>
                     <div class="pricing-price">
                         <div class="price-row">
                             <span class="price-old">299€</span>
                             <span class="price-new">149€</span>
-                            <span class="price-period">/Monat</span>
+                            <span class="price-period">/mois</span>
                         </div>
-                        <div class="price-setup">Einmalig: <s>399€</s> <strong>199€</strong></div>
+                        <div class="price-setup">Frais uniques : <s>399€</s> <strong>199€</strong></div>
                     </div>
-                    <div class="pricing-save">Du sparst 1.800€ pro Jahr</div>
+                    <div class="pricing-save">Vous économisez 1 800€ par an</div>
                     <ul class="pricing-features">
-                        <li><i data-lucide="check"></i> Eigene Restaurant-Website</li>
-                        <li><i data-lucide="check"></i> Eigene App (iOS & Android)</li>
-                        <li><i data-lucide="check"></i> Dashboard & Verwaltung</li>
-                        <li><i data-lucide="check"></i> KI-Produktbilder</li>
-                        <li><i data-lucide="check"></i> 0% Provision</li>
+                        <li><i data-lucide="check"></i> Votre propre site web de restaurant</li>
+                        <li><i data-lucide="check"></i> Votre propre application (iOS & Android)</li>
+                        <li><i data-lucide="check"></i> Tableau de bord et gestion</li>
+                        <li><i data-lucide="check"></i> Photos de produits par IA</li>
+                        <li><i data-lucide="check"></i> 0% de commission</li>
                     </ul>
-                    <a href="#" class="pricing-cta secondary" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Auswählen</a>
+                    <a href="#" class="pricing-cta secondary" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Sélectionner</a>
                 </div>
 
                 <div class="pricing-card featured">
-                    <div class="pricing-badge">Empfohlen</div>
+                    <div class="pricing-badge">Recommandé</div>
                     <div class="pricing-name">ORDABLE PLUS</div>
-                    <div class="pricing-desc">Website + App + Terminal</div>
+                    <div class="pricing-desc">Site web + App + Terminal</div>
                     <div class="pricing-price">
                         <div class="price-row">
                             <span class="price-old">399€</span>
                             <span class="price-new">199€</span>
-                            <span class="price-period">/Monat</span>
+                            <span class="price-period">/mois</span>
                         </div>
-                        <div class="price-setup">Einmalig: <s>999€</s> <strong>499€</strong></div>
+                        <div class="price-setup">Frais uniques : <s>999€</s> <strong>499€</strong></div>
                     </div>
-                    <div class="pricing-save">Du sparst 2.900€ pro Jahr</div>
+                    <div class="pricing-save">Vous économisez 2 900€ par an</div>
                     <ul class="pricing-features">
-                        <li><i data-lucide="check"></i> Alles aus ORDABLE</li>
-                        <li><i data-lucide="check"></i> Bestellterminal inklusive</li>
-                        <li><i data-lucide="check"></i> Vor-Ort Bestellungen</li>
-                        <li><i data-lucide="check"></i> Erweiterte Statistiken</li>
-                        <li><i data-lucide="check"></i> Premium Support</li>
+                        <li><i data-lucide="check"></i> Tout ce qui est dans ORDABLE</li>
+                        <li><i data-lucide="check"></i> Terminal de commande inclus</li>
+                        <li><i data-lucide="check"></i> Commandes sur place</li>
+                        <li><i data-lucide="check"></i> Statistiques avancées</li>
+                        <li><i data-lucide="check"></i> Support Premium</li>
                     </ul>
-                    <a href="#" class="pricing-cta primary" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Auswählen</a>
+                    <a href="#" class="pricing-cta primary" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Sélectionner</a>
                 </div>
             </div>
 
-            <p class="pricing-note"><i data-lucide="info"></i> Beide Pakete: 0% Provision, Early Bird Rabatt gilt dauerhaft</p>
+            <p class="pricing-note"><i data-lucide="info"></i> Les deux forfaits : 0% de commission, réduction Early Bird permanente</p>
         </div>
     </section>
 
@@ -1092,7 +1071,7 @@
             const submitBtn = form.querySelector('.form-submit');
             const originalText = submitBtn.innerHTML;
 
-            submitBtn.innerHTML = '<i data-lucide="loader-2"></i> Wird gesendet...';
+            submitBtn.innerHTML = '<i data-lucide="loader-2"></i> Envoi en cours...';
             submitBtn.disabled = true;
 
             fetch(form.action, {
@@ -1102,7 +1081,7 @@
             })
             .then(response => {
                 if (response.ok) {
-                    submitBtn.innerHTML = '<i data-lucide="check"></i> Erfolgreich gesendet!';
+                    submitBtn.innerHTML = '<i data-lucide="check"></i> Envoyé avec succès !';
                     submitBtn.style.background = '#10b981';
                     form.reset();
                     setTimeout(() => {
@@ -1112,11 +1091,11 @@
                         lucide.createIcons();
                     }, 3000);
                 } else {
-                    throw new Error('Fehler beim Senden');
+                    throw new Error('Erreur d\'envoi');
                 }
             })
             .catch(error => {
-                submitBtn.innerHTML = '<i data-lucide="x"></i> Fehler - Bitte erneut versuchen';
+                submitBtn.innerHTML = '<i data-lucide="x"></i> Erreur - Veuillez réessayer';
                 submitBtn.style.background = '#ef4444';
                 setTimeout(() => {
                     submitBtn.innerHTML = originalText;
